@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --radius: 10px;
+}
+
+html { color-scheme: dark; }
+
+body {
+  @apply bg-background text-foreground antialiased;
+}
+
+.container-app {
+  @apply grid grid-cols-[280px_1fr] h-dvh;
+}
+
+/* Scrollbars */
+*::-webkit-scrollbar { width: 10px; height: 10px; }
+*::-webkit-scrollbar-thumb { background: theme('colors.border'); border-radius: 9999px; }
+*::-webkit-scrollbar-track { background: transparent; }
+
+.prose {
+  @apply prose-invert max-w-none prose-pre:bg-accent prose-pre:border prose-pre:border-border prose-code:text-foreground;
+}
